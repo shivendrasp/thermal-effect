@@ -87,7 +87,11 @@ function CodeBlock({ code, lang = "tsx" }: { code: string; lang?: string }) {
       document.body.appendChild(ta);
       ta.focus();
       ta.select();
-      try { document.execCommand("copy"); } catch { /* fallback */ }
+      try {
+        document.execCommand("copy");
+      } catch {
+        /* fallback */
+      }
       document.body.removeChild(ta);
     };
     if (navigator.clipboard) {
@@ -151,7 +155,9 @@ function CodeBlock({ code, lang = "tsx" }: { code: string; lang?: string }) {
               justifyContent: "center",
               transition: "opacity 0.2s ease, transform 0.2s ease",
               opacity: copied ? 0 : 0.4,
-              transform: copied ? "scale(0.6) rotate(-10deg)" : "scale(1) rotate(0deg)",
+              transform: copied
+                ? "scale(0.6) rotate(-10deg)"
+                : "scale(1) rotate(0deg)",
             }}
           >
             <Copy size={14} color={TEXT} />
@@ -165,7 +171,9 @@ function CodeBlock({ code, lang = "tsx" }: { code: string; lang?: string }) {
               justifyContent: "center",
               transition: "opacity 0.2s ease, transform 0.2s ease",
               opacity: copied ? 1 : 0,
-              transform: copied ? "scale(1) rotate(0deg)" : "scale(0.6) rotate(10deg)",
+              transform: copied
+                ? "scale(1) rotate(0deg)"
+                : "scale(0.6) rotate(10deg)",
             }}
           >
             <Check size={14} color="#4ade80" />
@@ -319,7 +327,12 @@ function PropsTable() {
           }}
         >
           <thead>
-            <tr style={{ background: "#f9f9f9", borderBottom: "1px solid #e8e8e8" }}>
+            <tr
+              style={{
+                background: "#f9f9f9",
+                borderBottom: "1px solid #e8e8e8",
+              }}
+            >
               {["Prop", "Type", "Default", "Description"].map((h) => (
                 <th
                   key={h}
@@ -351,7 +364,10 @@ function PropsTable() {
                 }}
               >
                 <td
-                  style={{ padding: "13px 18px", whiteSpace: "nowrap" as const }}
+                  style={{
+                    padding: "13px 18px",
+                    whiteSpace: "nowrap" as const,
+                  }}
                 >
                   <code
                     style={{
@@ -381,7 +397,10 @@ function PropsTable() {
                   )}
                 </td>
                 <td
-                  style={{ padding: "13px 18px", whiteSpace: "nowrap" as const }}
+                  style={{
+                    padding: "13px 18px",
+                    whiteSpace: "nowrap" as const,
+                  }}
                 >
                   <code
                     style={{
@@ -394,7 +413,10 @@ function PropsTable() {
                   </code>
                 </td>
                 <td
-                  style={{ padding: "13px 18px", whiteSpace: "nowrap" as const }}
+                  style={{
+                    padding: "13px 18px",
+                    whiteSpace: "nowrap" as const,
+                  }}
                 >
                   <code
                     style={{
@@ -422,19 +444,19 @@ function PropsTable() {
 
 const INSTALL_CODE = `npx shadcn@latest add shivendrasp/thermal-effect/thermal-effect`;
 
-const USAGE_CODE = `import { ThermalEffect } from "react-thermal-effect";
+const USAGE_CODE = `import ThermalEffect from "@/components/thermal-effect";";
 
-<ThermalEffect
-  src="https://example.com/photo.jpg"
-  animationDuration={3500}
-  fadeDuration={1400}
-  sweepSpeed={0.4}
-  bandFrequency={2}
-  sweepBlur={0.4}
-  stops={60}
-  colors={["#FFFFFF", "#5B79FF", "#C9C9C9", "#FFFFFF", "#FFFFFF"]}
-  className="w-full h-[400px] rounded-2xl overflow-hidden"
-/>`;
+      <ThermalEffect
+        src="https://images.unsplash.com/photo-1605958572225-db1978a81811?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        animationDuration={1500}
+        fadeDuration={2000}
+        sweepSpeed={0.8}
+        bandFrequency={1}
+        sweepBlur={0.2}
+        stops={30}
+        colors={["#ECECEC", "#FFBBFA", "#FF7B47", "#FFD3D3", "#ECECEC"]}
+        className="w-200 h-120 rounded-2xl overflow-hidden"
+      />`;
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
@@ -469,7 +491,6 @@ export default function Documentation() {
         flexDirection: "column",
       }}
     >
-
       {/* ── Hero ── */}
       <section
         className="hero-section"
@@ -566,7 +587,14 @@ export default function Documentation() {
       <div style={{ height: 1, background: "#DCDCDC" }} />
 
       {/* ── Docs ── */}
-      <div style={{ padding: "0 0 42px", background: "transparent", alignSelf: "center", maxWidth: "800px"}}>
+      <div
+        style={{
+          padding: "0 0 42px",
+          background: "transparent",
+          alignSelf: "center",
+          maxWidth: "800px",
+        }}
+      >
         <Section title="Installation">
           <CodeBlock code={INSTALL_CODE} lang="bash" />
         </Section>
