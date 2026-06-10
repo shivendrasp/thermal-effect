@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F2F0EF;
+  color: #828282;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 400;
+}
+
+.hero-section {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+::selection {
+  background: #818181;
+  color: #EBEBEB;
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "thermal-effect",
+  "homepage": "https://github.com/YOUR_USERNAME/YOUR_REPO",
+  "items": [
+    {
+      "name": "thermal-effect",
+      "type": "registry:component",
+      "title": "ThermalEffect",
+      "description": "Animated thermal/infrared image loading effect. Sweeps a color-mapped gradient over an image before fading it in.",
+      "files": [
+        {
+          "path": "src/components/thermal-effect.tsx",
+          "type": "registry:component",
+          "target": "components/thermal-effect.tsx"
+        }
+      ]
+    }
+  ]
+}
