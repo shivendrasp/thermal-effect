@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "thermal-effect",
-  "homepage": "https://github.com/YOUR_USERNAME/YOUR_REPO",
+  "homepage": "https://github.com/shivendrasp/thermal-effect",
   "items": [
     {
       "name": "thermal-effect",
