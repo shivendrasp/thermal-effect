@@ -420,7 +420,7 @@ function PropsTable() {
 
 // ─── Code strings ─────────────────────────────────────────────────────────────
 
-const INSTALL_CODE = `npm install thermal-effect`;
+const INSTALL_CODE = `npx shadcn@latest add shivendrasp/thermal-effect/thermal-effect`;
 
 const USAGE_CODE = `import { ThermalEffect } from "react-thermal-effect";
 
