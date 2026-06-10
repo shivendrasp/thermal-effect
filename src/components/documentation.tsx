@@ -444,9 +444,10 @@ function PropsTable() {
 
 const INSTALL_CODE = `npx shadcn@latest add shivendrasp/thermal-effect/thermal-effect`;
 
-const USAGE_CODE = `import ThermalEffect from "@/components/thermal-effect";";
+const USAGE_CODE = `import ThermalEffect from "@/components/thermal-effect";"
+
 <ThermalEffect
-src="https://images.unsplash.com/photo-1605958572225-db1978a81811?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+src="./images/flower.png"
 animationDuration={1500}
 fadeDuration={2000}
 sweepSpeed={0.8}
